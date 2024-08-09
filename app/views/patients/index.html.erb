@@ -1,0 +1,93 @@
+<%= button_to 'ログアウト', destroy_user_session_path, method: :delete %>
+<%= link_to "ログイン", patients_path %>
+<%= button_to "新規登録", new_user_registration_path %> 
+<%= link_to "新規投稿へ", new_patient_path %>
+<%= page_entries_info @patients %>
+<%= paginate @patients %>
+
+<% if user_signed_in? %>
+   <%= link_to "マイページへ", user_path(current_user.id) %>
+<% end %>
+
+<div class="patient-container">
+<% patients.each do |t| %>
+   <div class="patient">
+      <%= image_tag t.image_url, size: "250x200" if t.image? %>
+      <%= link_to t.user.name, user_path(t.user.id) %> 
+      <%= t.user.email %>
+      <%= t.event %>
+      <%= t.inner %>
+      <%= t.outer %>
+      <%= t.review %>
+
+
+
+<!--- 総合評価の星の部分 ---------->
+<div>
+<h2>総合評価：
+<span class="star-rating">
+   <span class="star-rating-front" style="width: <%= getPercent(t.star) %>%;">★★★★★</span>
+   <span class="star-rating-back">★★★★★</span>
+</span> 
+</h2>
+</div>
+<!--- 総合評価の星の部分終わり------->
+
+
+   <% if user_signed_in? %>
+      <% if current_user.already_liked?(t) %>
+         <%= button_to patient_like_path(id: t.id, patient_id: t.id), method: :delete do %>
+            <p>いいねを取り消す</p><%= t.likes.count %>
+   <% end %>
+      <% else %>
+         <%= button_to patient_likes_path(id: t.id, patient_id: t.id), method: :post do %>
+            <p>いいね</p><%= t.likes.count %>
+         <% end %>
+      <% end %>
+   <% else %>
+      <p>いいねの数 = </p><%= t.likes.count %>
+   <% end %>
+
+      <%= t.created_at %>
+      <%= link_to "詳細へ", patient_path(t.id) %>
+
+<% if user_signed_in? && current_user.id == t.user_id %>
+      <%= link_to "編集する", edit_patient_path(t.id) %>
+      <%= button_to "削除する", patient_path(t.id), method: :delete %>
+   <% end %> 
+</div>
+
+<h3>検索</h3>
+<%= form_tag({controller:"patients",action:"index"}, method: :get) do %>
+   <%= text_field_tag :search %>
+   <%= submit_tag '検索する'  %>
+<% end %>
+<% end %>
+<%= form_tag({controller:"patients",action:"index"}, method: :get) do %>
+    <% Tag.all.each do |t| %>
+        <li><%= check_box :tag_ids, t.name %><%= t.name %></li>
+    <% end %>
+    <%= submit_tag '検索' %>
+<% end %>
+
+<%= form_tag({controller:"patients",action:"index"}, method: :get) do %>
+    <%= text_field_tag :tag %>
+    <%= submit_tag 'タグを追加' %>
+<% end %>
+
+<%= link_to '犬', patient_dog_path %>
+
+<%= month_calendar(attribute: :start_time, start_attribute: :start_time, end_attribute: :end_time, events: @events) do |date, events| %>
+    <%= date %>
+  <% events.each do |event| %>
+   <p><%= link_to event.event, event %></p>
+   <p><%= link_to event.inner %></p>
+   <p><%= link_to event.outer %></p>
+   <p><%= link_to event.review %></p>
+
+  <% end %>
+<% end %>
+
+<footer>
+     <small>© 2024 Mitsuko Asano</small>
+  </footer>

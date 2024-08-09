@@ -1,0 +1,96 @@
+// Place all the styles related to the hello controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.top-all{
+    text-align: center;
+}
+.top-title{
+color: rgb(67, 174, 78);
+}
+.top-explan{
+    padding: 0.2em 0.5em;
+    margin: 2em auto;
+    color: #565656;
+    background: #ffeaea;
+    box-shadow: 0px 0px 0px 10px #ffeaea;
+    border: dashed 2px #ffc3c3;
+    border-radius: 8px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 30px ;
+}
+.top-all img {
+    display: block; /* 画像をブロック要素として表示 */
+    margin: 0 auto; /* 画像を中央に配置 */
+}
+
+footer {
+    color: #ffffff; 
+    display: flex;
+    justify-content: center;
+    height: 20px;
+    font-size: 10px;  
+    align-items: center;
+}
+
+.heading-12 {
+    position: relative;
+    width: 290px;
+    margin: 10px auto;
+    padding: .5em .7em;
+    background-color: #a73939;
+    color: #fff;
+    text-align: center;
+
+}
+
+.heading-12::before,
+.heading-12::after {
+    position: absolute;
+    bottom: -10px;
+    z-index: -1;
+    border-style: solid;
+    border-color: #972929;
+    content: '';
+}
+
+.heading-12::before {
+    left: -30px;
+    border-width: 25px 25px 25px 15px;
+    border-left-color: transparent;
+}
+
+.heading-12::after {
+    right: -30px;
+    border-width: 25px 15px 25px 25px;
+    border-right-color: transparent;
+}
+
+.heading-12 span::before,
+.heading-12 span::after {
+    position: absolute;
+    bottom: -10px;
+    width: 10px;
+    height: 10px;
+    background-color: #470000;
+    content: '';
+}
+
+.heading-12 span::before {
+    left: 0;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%);
+}
+
+.heading-12 span::after {
+    right: 0;
+    clip-path: polygon(0 0, 100% 0%, 0% 100%);
+}
+
+
+.footer-image {
+    width: 100%; /* 画像の幅 */
+    display: block; /* ブロック要素として表示 */
+    margin-bottom: 10px; /* フッターの上に余白を設定 */
+}

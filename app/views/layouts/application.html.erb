@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welfare</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+<script src="https://kit.fontawesome.com/5067a98bb3.js"  crossorigin="anonymous"></script> 
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <h1>SMILE SHARE</h1>
+      <div class="header-button">
+        <i class="fa-solid fa-house"></i>
+        <%= link_to hello_top_path do %>
+        <% end %>
+        <% if user_signed_in? %>
+        <li><%= link_to "新規投稿", new_patient_path %></li>
+
+            <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
+          <% else %>
+            <li><%= link_to 'Login', new_user_session_path %></li>
+            <li><%= link_to "新規登録", new_user_registration_path %> </li>
+          <% end %>
+
+      </div>
+    </header>
+    <main>
+      <%= yield %>
+    </main>
+
+  </body>
+</html>

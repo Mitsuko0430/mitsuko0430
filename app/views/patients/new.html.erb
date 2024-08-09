@@ -1,0 +1,104 @@
+<div class="new-form">
+  <%= form_for @patient do |f| %>
+    <div class="box1-header">
+      <div class="field-parent">
+        <div class="field">
+          <%= f.select :category, [["イヌ", "dog"], ["ネコ", "cat"], ["ハダカデバネズミ", "hadakadebanezumi"]], include_blank: "利用者氏名" %>
+        </div>
+      </div>
+
+    <div class="field-parent">
+      <div class="field">
+        <%= f.label :start_time,"日付" %>
+        <p><%= f.date_field :start_time %></p>
+      </div>
+    </div>
+  </div>
+
+<div class="nnnn">
+  <div class="aki">
+    </div>
+  <div class="three">
+    <div class="box2">
+      <div class="field">
+        <%= f.label :時刻 %><br>
+        <%= f.text_field :review, :size => 3 %>   
+      </div>
+
+      <div class="field">
+        <%= f.label :業務内容 %><br>
+        <%= f.text_field :event, :size => 45 %>
+      </div>
+    </div>
+
+  <div class="box3">
+    <div class="field">
+      <%= f.label :所感（気付いたこと、疑問点、問題点、課題点など） %><br>
+      <%= f.text_field :inner, :size => 60 %>
+    </div>
+    </div>
+</div>
+
+<div class="aki">
+</div>
+
+  <div class="four">
+    <div class="good">
+      <h5><%= f.label :"Good News"%></h5>
+      <%= f.text_field :outer ,class: 'box4-text-field-new'%>
+    </div>
+
+    <div class=mitu>
+      <div class="itimai">
+        <h5><%= f.label :今日の一枚 %></h5>
+        <%= f.file_field :image ,class: 'custom-file-input'%>
+      </div>
+
+<div class="aki">
+</div>
+
+      <div class="box5-new">
+        <!-- <label for="star番号"><span class="text">星の上に表示したい文</span>★</label> -->
+        <h5>今日の調子</h5>
+        <div class="kibunn">
+          <div class="post_form">
+            <%= f.radio_button :star, 5 ,id: 'star1'%>
+            <label for="star1"><span class="text"></span>★</label>
+
+            <%= f.radio_button :star, 4 ,id: 'star2'%>
+            <label for="star2"><span class="text"></span>★</label>
+
+            <%= f.radio_button :star, 3 ,id: 'star3'%>
+            <label for="star3"><span class="text"></span>★</label>
+
+            <%= f.radio_button :star, 2 ,id: 'star4'%>
+            <label for="star4"><span class="text"></span>★</label>
+
+            <%= f.radio_button :star, 1 ,id: 'star5'%>
+            <label for="star5"><span class="text"></span>★</label>
+          </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="new-button">
+    <div class="toukou">
+      <%= f.submit "投稿する" %>
+    </div>
+    <% end %>
+      <div class='form-group'>
+        <%= link_to "投稿一覧に戻る", users_path %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%#= f.collection_check_boxes(:tag_ids, Tag.all, :id, :name) do |tag| %#>
+      <div class='form-check'>
+      <%#= tag.label class: 'form-check-label' do %>
+      <%#= tag.check_box class: 'form-check-input' %>
+      <%#= tag.text %#>
+      <%# end %>
+      <%#/div>
+      <%# end %>

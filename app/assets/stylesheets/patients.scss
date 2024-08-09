@@ -1,0 +1,184 @@
+// Place all the styles related to the patients controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.lecture_form{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 300px;
+  margin: 30px;
+}
+.name_field{
+  width: 200px;
+  margin-bottom: 30px;
+}
+
+/*　以下新規投稿ページの星用のCSS　*/
+
+.post_form{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+.post_form input[type='radio']{
+  display: none;
+  margin-bottom: 10px;
+}
+.post_form label{
+  position: relative;
+  padding: 0 0 0;
+  color: #e4e3e2;
+  cursor: pointer;
+  font-size: 30px; /*星の大きさを変更するときはここ*/
+  margin-right: 1px;
+}
+.post_form label .text{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  text-align: center;
+  font-size: 9px; /*星の上の説明書きの大きさを変更するときはここ*/
+  color: #f56500;
+}
+.post_form label:hover,
+.post_form label:hover ~ label,
+.post_form input[type='radio']:checked ~ label{
+  color: #ffcc00;
+}
+
+
+/*　以下一覧ページの星用のCSS　*/
+
+.star-rating {
+  position: relative;
+  display: inline-block;
+  width: 5em;
+  height: 1em;
+  font-size: 25px;
+}
+.star-rating-front {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  color: #ffcc33;
+}
+.star-rating-back {
+  display: inline-block;
+  color: #ccc;
+
+}
+
+.new_patient{
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* 水平方向の中央揃え */
+  align-items: center;     /* 垂直方向の中央揃え */
+
+}
+
+a {
+  color: #f56500;
+}
+
+body {
+  background-color: #bec8c1; /* 背景色を青色に設定 */
+  color: rgb(113, 106, 103); /* テキストの色を白に設定（必要に応じて） */
+}
+
+.ribbon2 {
+  display: inline-block;
+  position: relative;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  padding: 7px 0;
+  font-size: 18px;/*フォントサイズ*/
+  background: #78d0f5;/*背景色*/
+  color: #FFF;/*文字色*/
+  box-sizing: border-box;
+}
+
+.ribbon2 h3 {
+  margin: 0;
+  padding: 0 30px;
+  border-top: dashed 1px #FFF;/*上の破線*/
+  border-bottom: dashed 1px #FFF;/*下の破線*/
+  line-height: 46px;
+}
+
+.ribbon2:before, .ribbon2:after {
+  position: absolute;
+  content: '';
+  width: 0px;
+  height: 0px;
+  z-index: 1;
+}
+
+.ribbon2:before {
+  /*左端の山形*/
+  top: 0;
+  left: 0;
+  border-width: 30px 0px 30px 15px;
+  border-color: transparent transparent transparent #acd879;
+  border-style: solid;
+}
+
+.ribbon2:after {
+  /*右端の山形*/
+  top: 0;
+  right: 0;
+  border-width: 30px 15px 30px 0px;
+  border-color: transparent #654c4c transparent transparent;
+  border-style: solid;
+}
+
+.ribbon3 {
+  display: inline-block;
+  position: relative;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  padding: 7px 0;
+  font-size: 18px;
+  background: #acd879;
+  color: #FFF;
+  box-sizing: border-box;
+}
+
+.ribbon3 h3 {
+  margin: 0;
+  padding: 0 30px;
+  border-top: dashed 2px rgba(255, 255, 255, 0.5);
+  border-bottom: dashed 2px rgba(255, 255, 255, 0.5);
+  line-height: 42px;
+}
+
+.ribbon3:before, .ribbon3:after {
+  position: absolute;
+  content: '';
+  width: 0px;
+  height: 0px;
+  z-index: 1;
+}
+
+.ribbon3:before {
+  /*左の山形*/
+  top: 0;
+  left: 0;
+  border-width: 30px 0px 30px 15px;
+  border-color: transparent transparent transparent #fff;
+  border-style: solid;
+}
+
+.ribbon3:after {
+  /*右の山形*/
+  top: 0;
+  right: 0;
+  border-width: 30px 15px 30px 0px;
+  border-color: transparent #fff transparent transparent;
+  border-style: solid;
+}

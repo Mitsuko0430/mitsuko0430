@@ -1,0 +1,245 @@
+.box1-header{
+ display: flex; /* Flexboxを有効にする */
+  justify-content: center; 
+  align-items: center; /* 要素を垂直方向に中央揃えする */
+  height: 20vh; /* コンテナの高さを100%のビュー高さにする */
+  width: 100%;
+}
+
+.field-parent {
+  display: flex;
+  justify-content: center; /* 子要素内の横方向の中央寄せ */
+  align-items: center;     /* 子要素内の縦方向の中央寄せ */
+  width: 50%;            /* 子要素の幅 */
+  height:100%;           /* 子要素の高さ */
+}
+
+.box1-header .field-parent .field{
+    background-color: #7CC0D5; /* アイテムの背景色 */
+  color: white; /* アイテムのテキスト色 */
+  padding: 10px; /* アイテムの内側の余白 */
+  text-align: center; /* テキストを中央揃えする */
+  border-radius: 5px; /* アイテムの角を丸くする */
+  margin: 30px; /* アイテム間の外側の余白 */
+  width: 200px;
+}
+
+.box2{
+    display: flex; /* Flexboxを有効にする */
+    justify-content: center;
+     align-items: center; /* 要素を垂直方向に中央揃えする */
+     height: 20vh; /* コンテナの高さを100%のビュー高さにする */
+    // width: 20px;
+    border-radius: 5px; /* アイテムの角を丸くする */
+    background-color: #7CC0D5; /* アイテムのテキスト色 */
+    margin: 20px;
+}
+
+.box2 .field{
+  color: white; /* アイテムのテキスト色 */
+  padding: 20px; /* アイテムの内側の余白 */
+  text-align: center; /* テキストを中央揃えする */
+  border-radius: 5px; /* アイテムの角を丸くする */
+  margin: 0px; /* アイテム間の外側の余白 */
+
+}
+
+.box2 .field:not(:last-child) {
+    margin-right: -4px; /* アイテム同士をくっつける */
+}
+
+.box3{
+    display: flex; /* Flexboxを有効にする */
+    justify-content: center;
+     align-items: center; /* 要素を垂直方向に中央揃えする */
+     height: 20vh; /* コンテナの高さを100%のビュー高さにする */
+    width: 100%;
+}
+
+.box3 .field{
+  color: white; /* アイテムのテキスト色 */
+  padding: 20px; /* アイテムの内側の余白 */
+  text-align: center; /* テキストを中央揃えする */
+  border-radius: 5px; /* アイテムの角を丸くする */
+  margin: 0px; /* アイテム間の外側の余白 */
+}
+
+.four{
+    display: flex; /* Flexboxを有効にする */
+    //  justify-content: space-between; /* 要素間のスペースを均等にする */
+     align-items: center; /* 要素を垂直方向に中央揃えする */
+     height: 50vh; /* コンテナの高さを100%のビュー高さにする */
+    width: 80%;
+    background-color: #F7D69D; /* アイテムの背景色 */
+    margin: 50px auto;
+    justify-content: center;
+
+}
+
+.four .field{
+       background-color:#BCDA7F; /* アイテムの背景色 */
+     color: white; /* アイテムのテキスト色 */
+     padding: 20px; /* アイテムの内側の余白 */
+     text-align: center; /* テキストを中央揃えする */
+     border-radius: 5px; /* アイテムの角を丸くする */
+     margin: 10px; /* アイテム間の外側の余白 */
+}
+.four-text-field{
+    width: 50px;
+    height:50px;
+}
+
+.box5-new{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #7CC0D5; /* アイテムの背景色 */
+  width: 100%;
+  border-radius: 5px; /* アイテムの角を丸くする */
+  height: 40%;
+  flex-direction: column ;
+  position: absolute;
+  bottom:5%;
+  right: 5%;
+  color: #fff;
+}
+
+.btn--orange,
+a.btn--orange {
+  color: #fff;
+  background-color: #eb6100;
+}
+.btn--orange:hover,
+a.btn--orange:hover {
+  color: #fff;
+  background: #f56500;
+}
+
+a.btn--radius {
+  border-radius: 200vh;
+}
+
+.three{
+  display: flex; /* Flexboxを有効にする */
+  // justify-content: space-between; /* 要素間のスペースを均等にする */
+  height: 40vh; /* コンテナの高さを100%のビュー高さにする */
+  width: 80%;
+ background-color: #BCDA7F; /* アイテムの背景色 */
+  margin: 10%;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+
+.nnnn{
+  background-color: #7CC0D5; /* アイテムの背景色 */
+  width: 60%;
+  display: flex; /* Flexboxを有効にする */
+  justify-content: center;
+flex-direction: column;
+padding-top: 20px;
+
+}
+
+.field{
+    border-radius: 5px; /* アイテムの角を丸くする */
+    background-color: #7CC0D5; /* アイテムのテキスト色 */
+}
+
+.toukou{
+  color: rgb(1, 1, 1); /* アイテムのテキスト色 */
+    position: relative;
+    top: -40px; /* 必要に応じて調整 */
+}
+
+.form-group{
+  color: #f56500; /* アイテムのテキスト色 */
+    position: relative;
+    top: -40px; /* 必要に応じて調整 */
+}
+
+.itimai{
+  display: flex;
+  justify-content: center;
+  background-color: #7CC0D5; /* アイテムの背景色 */
+  width: 100%;
+  border-radius: 5px; /* アイテムの角を丸くする */
+  height: 30%;
+  flex-direction: column ;
+  font-size: 15px;
+  padding-top: 20px;
+  padding-bottom: 40px ;
+  position: absolute;
+  top:5%;
+  right: 5%;
+  color: #fff;
+}
+
+.custom-file-input{
+  width: 200px; /* 幅を指定 */
+  height: 20px; /* 高さを指定 */
+  padding: 25px; /* パディングを指定 */
+  font-size: 8px; /* フォントサイズを指定 */
+  display: flex;
+  align-items: center;
+
+  left: 30%;
+}
+
+
+.good{
+  background-color: #7CC0D5; /* アイテムの背景色 */
+  width: 40%;
+  border-radius: 5px; /* アイテムの角を丸くする */
+  flex-direction: column ;
+  height: 50%;
+  // margin-left: 5%;
+  margin-right: 5%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.good input[type="text"]{
+  display: block;
+  margin: 0 auto;
+}
+
+.aki{
+  height: 10px;
+}
+
+.mitu{
+  width: 50%;
+  height: 100%;
+  // margin-left: 3%;
+  // margin-right: 5%;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle; /* 垂直方向の中央揃え */
+  position: relative;
+  background-color: #F7D69D;
+}
+
+.kibunn{
+  width: 80%;
+  right: 5%;
+  color:#fff
+}
+
+
+
+.new-button{
+  display: flex;
+  justify-content: center; /* 子要素内の横方向の中央寄せ */
+  align-items: center;     /* 子要素内の縦方向の中央寄せ */
+  width: 100%;            /* 子要素の幅 */
+  height:100%; 
+  flex-direction: column;
+}
+
+.box4-text-field-new{
+  width: px;
+  height:40px; 
+}

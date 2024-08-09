@@ -1,0 +1,103 @@
+<div class="box1-header">
+      <div class="field-parent">
+        <div class="field">
+            <p><span>利用氏名:<%= @patient.category %></span></p>
+        </div>
+      </div>
+
+    <div class="field-parent">
+      <div class="field">
+        <p>日付<br><%= @patient.start_time %></p>
+      </div>
+    </div>
+  </div>
+
+<div class="patient-show">
+
+  <div class="blue">
+    <div class="midori">
+      <div class="midori-1">
+        <div class="box">
+          <p>時刻：<%= @patient.review %></p>
+        </div>
+        <div>
+          <p>業務内容：<%= @patient.event %></p>
+        </div>
+        <div>
+          <p>所感：<%= @patient.inner %></p>
+        </div>
+    </div>
+    <div class="midori-2">
+      <div class="two">
+        <div class="good-show">
+          <p>Good News<br><%= @patient.outer %></p>
+        </div>
+        <h2 class="tyoushi">今日の調子</h2>
+        <div class="star">
+
+          <span class="star-rating">
+            <span class="star-rating-front" style="width: <%= getPercent(@patient.star) %>%;">★★★★★</span>
+            <span class="star-rating-back">★★★★★</span>
+          </span> 
+        </div>
+      </div>
+      <div class="box4-show">
+        <h2 class="hhhh"> 今日の一枚：</h2><br>
+        <%= image_tag @patient.image_url, size: "250x200" if @patient.image? %>
+      </div>
+    </div>
+
+
+    <%= link_to "編集する", edit_patient_path(@patient.id),class:"migi" %>
+  </div>
+
+<div class="pink">
+  <div class="comment-wrapper">
+    <h1>Family</h1>
+    <% @comments.each do |c| %>
+      <div>
+        <%= c.user.email unless c.user.blank? %>
+        <br>
+        <%= c.content %>
+        <br>
+      </div>
+    <% end %>
+
+    <% if user_signed_in? %>
+      <%= form_with(model: [@patient, @comment], local: true) do |f| %>
+        <%= f.text_area :content %>
+        <%= button_tag type: "submit" do %>
+          <i class="far fa-comments"></i> コメントする
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+
+<%# @patient.tags.each do |tag| %>
+    <span><%#= tag.name %></span>
+<%# end %>
+
+<div class="heikou">
+
+<div class="iine">
+<%#if user_signed_in? %>
+      <%# if current_user.already_liked?(@patient) %>
+        <%#= link_to patient_like_path(@patient), method: :delete do %>
+          <p></p><%#= @patient.likes.count %>
+        <%# end %>
+      <%# else %>
+        <%#= link_to patient_likes_path(@patient), method: :post do %>
+          <p></p><%#= @patient.likes.count %>
+        <%# end %>
+      <%# end %>
+    <%# else %>
+      <p> </p><%#= @patient.likes.count %>
+    <%# end %>
+</div>
+</div>
+  <%= link_to "カレンダーに戻る", patient_dog_path ,class:"modolu"%>
+
+</div>
+</div>

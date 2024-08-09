@@ -1,0 +1,139 @@
+// 親要素と小要素の関係をまず考える！、
+// 小要素のblank2は、中央揃えにして、大きさは全体の半分の長さかな〜みたいな感じ！
+
+
+.blank1{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.blank2{
+text-align: center;
+width: 50%;
+text-align: center;
+color: white;
+background: #B8D88F;
+border-radius: 9px;
+margin: 20px 5px;
+padding: 20px 40px;
+}
+
+.ao{
+  background: #7CC0D5;
+}
+
+.field-8 {
+  background: #7CC0D5;
+}
+
+.field-9 {
+  background: #7CC0D5;
+}
+
+
+.blank1-shinki{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  .blank2-shinki{
+  text-align: center;
+  width: 50%;
+  text-align: center;
+  color: white;
+  background: #7CC0D5;
+  border-radius: 9px;
+  margin: 20px 5px;
+  padding: 20px 40px;
+  }
+  
+
+.btn--orange,
+a.btn--orange {
+  color: #fff;
+
+}
+.btn--orange:hover,
+a.btn--orange:hover {
+  color: #fff;
+  background: #423d3a;
+}
+
+a.btn--radius {
+  border-radius: 100vh;
+}
+
+.field-1{
+  background-color: #B8D88F;
+}
+.field-2{
+  background-color: #B8D88F;
+}
+
+.footer-image {
+    width: 100%; /* 画像の幅 */
+    height: auto; /* 画像の高さを自動調整 */
+    display: block; /* ブロック要素として表示 */
+    margin-bottom: 10px; /* フッターの上に余白を設定 */
+  }
+// // ここから下は、こだわりポイント！
+
+
+
+
+// // どこの aタグなのかわからんから、.class名スペースaとする
+// .blank2 a{
+// color:#ffffff;
+// }
+
+
+// .field label {
+// font-weight: 100;
+// font-size: 15px;
+// }
+
+
+
+
+// // 場合に応じて入力する場所の大きさ変えたいよね！その場合は、.class名スペースinputで差別化する！
+// // passwardの枠だけでかくしたかったらどうしたらいいかな？？
+
+
+// .field input[type="email"] {
+// border-style: none;
+// width: 200px;
+// height: 30px;
+// background: #87f02b;
+// border-radius: 10px;
+// border: 1px #060339 solid;
+// }
+
+
+// .field input[type="password"] {
+// border-style: none;
+// width: 200px;
+// height: 30px;
+// background: #33b887;
+// border-radius: 10px;
+// border: 1px #060339 solid;
+// }
+
+
+
+
+// .actions input[type="submit"] {
+// border-style: none;
+// width: 150px;
+// height: 30px;
+// background: #f2a566;
+// border-radius: 10px;
+// border: 1px #060339 solid;
+// }
+
+
+// .actions input[type="submit"]:hover {
+// cursor: pointer;
+// background: linear-gradient(to bottom,#1c94ea,#5ba2f4f3);
+// }

@@ -1,0 +1,159 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ + *= require simple_calendar
+ *= require_tree .
+ *= require_self
+ */
+header{
+    display: flex;
+    justify-content: flex-end;
+    color: #f9f8f8;
+    background-color: #C38966;
+    height: 70px;
+    font-weight: bold;
+    align-items: center;
+      }
+
+.fa-solid.fa-house{
+    color: #fff;
+    text-decoration: none;
+    margin-right: 40px;
+  }
+  
+.fa-solid.fa-house:hover{
+    color: rgb(136, 202, 197);
+  } 
+
+.header-button a{
+    color: #fff;
+    text-decoration: none;
+  }
+
+  header h1 {
+    color: white;
+    margin-right: 580px;
+    
+}
+
+
+  .header-button a:hover{
+    color: rgb(136, 202, 197);
+  } 
+  header li {
+    list-style: none;
+    margin-right: 40px;
+  }
+
+  .header-button{
+    display: flex;
+    align-items: center;
+  }
+
+  body {
+    background-color: #F6F4D5; /* ページ全体の背景色をライトブルーに設定 */
+    margin: 0; /* デフォルトの余白を削除 */
+    padding: 0; /* デフォルトのパディングを削除 */
+  }
+
+  .calendar-day {
+    position: relative;
+  margin: 50px;
+  }
+
+
+
+
+  .calendar-image {
+    width: 100%; /* 画像の幅を親要素に合わせる */
+    height: auto; /* 画像の高さを自動調整 */
+    display: block; /* 画像をブロック要素として表示 */
+    /*margin-top: 10px; /* 上部にマージンを追加 */
+  }
+
+.table{
+  width: 100%;
+}
+
+.table thead {
+display: none;
+  }
+
+
+  .calendar-header {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .calendar-header .calendar-day {
+    flex: 1;
+    padding: 10px; /* 必要に応じて調整 */
+    text-align: center;
+      width: 100%;
+  }
+  
+  .calendar-header .sunday {
+    background-color: #f9e6e6;
+    width: 15%;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .calendar-header .monday {
+    background-color: #e6f9e6;
+    width: 15%;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .calendar-header .tuesday {
+    background-color: #e6e6f9;
+    width: 15%;
+    padding: 0;
+    margin: 0;
+
+  }
+  
+  .calendar-header .wednesday {
+    background-color: #f9f9e6;  
+      width: 15%;
+      padding: 0;
+    margin: 0;
+
+  }
+  
+  .calendar-header .thursday {
+    background-color: #e6f9f9;
+    width: 15%;
+    padding: 0;
+    margin: 0;
+
+  }
+  
+  .calendar-header .friday {
+    background-color: #f9e6f9;
+    width: 15%;
+    padding: 0;
+    margin: 0;
+
+  }
+  
+  .calendar-header .saturday {
+    background-color: #e6e6e6;
+    width: 15%;
+    padding: 0;
+    margin: 0;
+
+  }
+  

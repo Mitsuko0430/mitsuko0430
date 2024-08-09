@@ -1,0 +1,11 @@
+<%= form_for @patient do |f| %>
+  <%= f.label :event %>
+  <%= f.label :inner %>
+  <%= f.label :outer %>
+  <%= f.label :review %>
+  <%= f.text_field :event, :size => 140 %> 
+  <%= f.text_field :inner, :size => 140 %> 
+  <%= f.text_field :outer, :size => 140 %> 
+  <%= f.text_field :review, :size => 140 %> 
+  <%= f.submit "編集する" %>
+<% end %>

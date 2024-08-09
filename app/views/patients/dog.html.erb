@@ -1,0 +1,34 @@
+<div class="ribbon3">
+  <h3>Aさん</h3>
+</div>
+<%# @patients.each do |t| %>
+  <%# if t.category == "dog" %>  
+  <p><%#= t.event %></p>
+  <%# end %>
+<%# end %>
+
+<!-- app/views/calendar/index.html.erb -->
+<div class="calendar-container">
+<div class="calendar-header">
+  <div class="calendar-day sunday">Sunday</div>
+  <div class="calendar-day monday">Monday</div>
+  <div class="calendar-day tuesday">Tuesday</div>
+  <div class="calendar-day wednesday">Wednesday</div>
+  <div class="calendar-day thursday">Thursday</div>
+  <div class="calendar-day friday">Friday</div>
+  <div class="calendar-day saturday">Saturday</div>
+</div>
+<%= month_calendar(attribute: :start_time, start_attribute: :start_time, end_attribute: :end_time, events: @events) do |date, events| %>
+<div class="calendar-day">
+  <%= date.day %>
+  <% events.each do |event| %>
+  <% if event.image.present? %>
+    <%= link_to patient_path(event) do %>
+  <%= image_tag(event.image.url, class: "calendar-image") %>
+  <% end %>
+  <% end %>
+    <% end %>
+</div>
+<% end %>
+
+<%= link_to "新規投稿へ", new_patient_path %>
